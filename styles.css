@@ -1,0 +1,213 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+main {
+  margin: 10rem auto;
+  width: 55rem;
+  z-index: 1;
+}
+
+#main-title {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+#sub-title {
+  text-align: center;
+  color: #7e7e7e;
+}
+
+#todo-container {
+  background-color: #fafafa;
+  margin-top: 3rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(196, 193, 193, 0.336);
+          box-shadow: 0 0.5rem 0.5rem rgba(196, 193, 193, 0.336);
+  position: relative;
+  z-index: 1;
+}
+
+#todo-container:hover::after {
+  top: 1.2rem;
+}
+
+#todo-container:hover::before {
+  top: 2.4rem;
+}
+
+#todo-container::after {
+  position: absolute;
+  top: .8rem;
+  left: 50%;
+  content: '';
+  width: 95%;
+  height: 100%;
+  background: #fff;
+  z-index: -2;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  border-radius: inherit;
+  -webkit-transition: top .4s;
+  transition: top .4s;
+}
+
+#todo-container::before {
+  position: absolute;
+  top: 1.6rem;
+  left: 50%;
+  content: '';
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  z-index: -2;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  border-radius: inherit;
+  -webkit-transition: top .4s;
+  transition: top .4s;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  outline: none;
+  border: none;
+  border-bottom: .2rem solid #afafaf4d;
+  -webkit-transition: border-bottom-color .5s;
+  transition: border-bottom-color .5s;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.input:focus {
+  border-bottom-color: dodgerblue;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: inherit;
+}
+
+.todo-list-item {
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-list-item:not(:last-child) {
+  border-bottom: 1px solid #afafaf4d;
+}
+
+.todo-list-item-checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: .1rem solid dodgerblue;
+  position: relative;
+}
+
+.todo-list-item-checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  background-color: transparent;
+  border-radius: inherit;
+  content: '';
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.todo-list-item-checkbox:checked::after {
+  background-color: dodgerblue;
+}
+
+.todo-list-item-checkbox:checked + .todo-list-item-text {
+  text-decoration: line-through;
+}
+
+.todo-list-item-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+#todo-footer {
+  border-top: 2px solid #afafaf4d;
+  padding: 1rem 2rem !important;
+}
+
+#todo-footer {
+  font-size: 1.2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: inherit;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.todo-footer-actions {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-footer-action {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.todo-footer-action.active {
+  border: 1px solid #afafaf4d;
+  padding: .5rem;
+}
+/*# sourceMappingURL=styles.css.map */

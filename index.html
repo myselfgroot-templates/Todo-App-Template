@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/myselfgroot/css-grid/grid.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1 id="main-title">Todo List App</h1>
+        <p id="sub-title">made with ❤️ by gaurav @myselfgroot</p>
+
+        <div id="todo-container">
+            <input type="text" class="input" placeholder="What you want to add?">
+            <div class="todo-list">
+                <div class="todo-list-item row">
+                    <input type="checkbox" class="col-1 todo-list-item-checkbox">
+                    <p class="todo-list-item-text col-11">Eat something</p>
+                </div>
+                <div class="todo-list-item row">
+                    <input type="checkbox" class="col-1 todo-list-item-checkbox">
+                    <p class="todo-list-item-text col-11">Take a shower</p>
+                </div>
+            </div>
+            <footer id="todo-footer" class="row">
+                <p class="todos-info col-2">2 items left</p>
+                <div class="todo-footer-actions row col-4">
+                    <div class="todo-footer-action col-1 active">All</div>
+                    <div class="todo-footer-action col-1">Active</div>
+                    <div class="todo-footer-action col-1">Completed</div>
+                </div>
+                <div class="todo-footer-clear col-3">Clear Completed</div>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
